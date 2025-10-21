@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "./components/navbar";
 import PokemonCard from "./components/PokemonCard";
 
@@ -37,6 +37,11 @@ function App() {
   if (pokemon == null) {
     throw new Error("Invalid pokemon name");
   }
+  useEffect(() => {
+    alert(
+      "J'en peux plus, j'ai envie de me jeter sous un pont mais tranquille on survit :D",
+    );
+  }, []);
 
   return (
     <div>
